@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>House Price Prediction</h2>
+
+    <form method="post">
+        <label>Area (sqft)</label>
+        <input type="number" name="area" required>
+
+        <label>Bedrooms</label>
+        <input type="number" name="bedrooms" required>
+
+        <label>Bathrooms</label>
+        <input type="number" name="bathrooms" required>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        <h3>Predicted Price: ₹ {{ prediction }}</h3>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
